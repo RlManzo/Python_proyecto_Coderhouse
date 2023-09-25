@@ -1,0 +1,32 @@
+{% extends 'AppCoder/padre.html' %}
+
+
+    {% block titulo %}
+    <h1 class="container" style="color: azure; margin-left: 20%;">Agreguemos tus datos de usuario</h1>
+    <div class="container" style="width: 400px; margin-top: 50px;">
+    <form style="background-color: rgb(193, 149, 235); padding: 20px; border-radius: 15px;" action="/AppCoder/profe" method="POST">{% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">nombre</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nombre">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="apellido">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputPassword1" name="email">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Profesion</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="profesion">
+          </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary" value="enviar">Submit</button>
+      </form>
+    </div>
+    {% endblock %}

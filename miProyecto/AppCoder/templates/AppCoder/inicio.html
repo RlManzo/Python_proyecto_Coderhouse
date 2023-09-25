@@ -1,0 +1,38 @@
+{%  extends 'AppCoder/padre.html' %}
+
+{% block titulo %}
+{% load static %}  
+<h1 class="container" style="color: azure; margin-left: 20%;">Bienvenido a nuestra tienda oficial de Nintendo</h1>
+<div class="d-flex">
+    <div class="flex container" style="margin-right: 50px; margin-bottom: 50px; margin-top: 50px;">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'imagen1.jpg' %}" class="card-img-top" style="width: 287px; height: 358px;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Sonic Frontier</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>     
+    </div>
+    <div class="flex container" style="margin-right: 50px; margin-bottom: 50px; margin-top: 50px;">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'imagen2.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Zelda Breath of the Wild</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>     
+    </div>
+    <div class="flex container" style="margin-right: 50px; margin-bottom: 50px; margin-top: 50px;">
+        <div class="card" style="width: 18rem;">
+            <img src="{% static 'imagen3.jpg' %}" class="card-img-top"  alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mario Party</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>     
+    </div>
+</div>
+{% endblock %}

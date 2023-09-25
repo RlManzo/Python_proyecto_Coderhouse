@@ -1,0 +1,13 @@
+{% extends 'AppCoder/padre.html' %}
+
+  {% block titulo %}
+    <h1 style="color: aliceblue;">Resultado de busqueda:</h1>
+   
+    {% for user in res %}  
+     <h3>{{user.nombre}}</h3>  
+
+      <h3> {{user.apellido}}</h3>
+       
+      <h3>{{user.email}}</h3> 
+    {% endfor %}   
+  {% endblock %}

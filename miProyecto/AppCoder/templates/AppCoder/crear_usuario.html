@@ -1,0 +1,31 @@
+{% extends 'AppCoder/padre.html' %}
+
+
+    {% block titulo %}
+    <h1 class="container" style="color: azure; margin-left: 20%;">Registrate para empezar a comprar</h1>
+    <div class="container" style="width: 400px; margin-top: 50px; margin-bottom: 50px;">
+    <form style="background-color: rgb(193, 149, 235); padding: 20px; border-radius: 15px;" action="/AppCoder/crear_usuario" method="POST">{% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nombre" placeholder="Nombre">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Contraseña">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputPassword1" name="email">
+          </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+       <button class="btn btn-success"> <a class="nav-link" href="{% url 'UsuarioDatos' %}">
+           cargar datos
+        </a></button>
+        <button type="submit" class="btn btn-primary" value="enviar">Registrarse</button>
+      </form>
+    </div>
+    {% endblock %}
