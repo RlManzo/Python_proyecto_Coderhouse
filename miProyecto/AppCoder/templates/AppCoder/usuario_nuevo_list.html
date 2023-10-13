@@ -1,0 +1,30 @@
+{% extends 'AppCoder/padre.html' %}
+
+ {% block titulo %} 
+   <h1>bienvenidos</h1>
+ 
+ 
+   
+     {%  for user in object_list %}
+     <div style="background-color: aqua;" class="container">
+     <ul class="container" style="color: black">
+
+        <li>
+            nombre : {{user.nombre}}
+        </li>
+        <li>
+           apellido: {{user.apellido}}
+        </li>
+        <li>
+          email: {{user.email}}
+        </li>
+        <li>
+           password {{user.password}}
+        </li>
+        <a class="btn btn-success" href="{% url 'actualizarUsuarioNuevo' user.id %}">update datos</a>
+
+    </ul>
+   </div>
+    {%  endfor %}
+   
+{% endblock %} 

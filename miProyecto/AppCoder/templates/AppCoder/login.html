@@ -1,0 +1,25 @@
+{%  extends 'AppCoder/padre.html' %}
+
+
+
+{% block titulo %}
+<h1>iniciar sesion</h1>
+<div class="container" style="width: 400px; margin-top: 50px; margin-bottom: 50px;">
+<form style="background-color: rgb(193, 149, 235); padding: 20px; border-radius: 15px;" action="" method="POST"> {%  csrf_token %}
+
+  <table>
+
+      {{  form.as_table }}
+  </table>
+  <input class="btn btn-primary" type="submit" value="iniciar sesion">
+
+
+</form>
+</div>
+
+<h1> 
+{{mensaje}}
+</h1> 
+
+
+{% endblock %}

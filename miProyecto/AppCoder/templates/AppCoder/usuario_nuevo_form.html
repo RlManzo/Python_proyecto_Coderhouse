@@ -1,0 +1,17 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% block titulo %}
+<div class="container" style="width: 400px; margin-top: 50px; margin-bottom: 50px;">
+<form style="background-color: rgb(193, 149, 235); padding: 20px; border-radius: 15px;" action="" method="POST"> {%  csrf_token %}
+
+  <table>
+
+      {{  form.as_table }}
+  </table>
+  <input class="btn btn-primary" type="submit" value="guardar">
+  <a class="btn btn-primary" href="{% url 'verUsuarioNuevo'%}">volver</a>
+
+</form>
+</div>
+
+{% endblock %}

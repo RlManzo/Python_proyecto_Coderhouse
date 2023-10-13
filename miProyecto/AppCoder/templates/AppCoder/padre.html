@@ -30,14 +30,21 @@
                 <a class="nav-link" href="{% url 'BusquedaForm'%}">busqueda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="{% url 'usuarioNuevo'%}">nuevo usuario</a>
               </li>
-            </ul>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'verUsuarioNuevo'%}">ver usuarios</a>
+            </li>
+           </ul>
             <!-- Este boton lleva al formulario de registro en base de datos-->
             <div class="d-flex">
               <a class="nav-link" href="{% url 'Usuario'%}">
                <button class="btn btn-primary" type="submit">registrarse</button>
               </a>
+              <a class="nav-link" href="{% url 'login'%}">
+                <button class="btn btn-primary" type="submit">login</button>
+               </a>
             </div>
             <ul>
               {% block form %}

@@ -1,14 +1,14 @@
 {% extends 'AppCoder/padre.html' %}
 
 
-    {% block form %}
-    <div class="container" style="width: 400px; margin-top: 50px;">
-    <form  action="/AppCoder/resultado" method="GET">
-       
-        <div class="mb-3">
-          <input type="text" class="form-control" id="exampleInputPassword1" name="nombre" placeholder="buscar por nombre">
-        </div>
-        <button type="submit" class="btn btn-primary" value="enviar">Submit</button>
-      </form>
+{% block form %}
+<div class="container" style="width: 400px; margin-top: 50px;">
+  <form action="/AppCoder/resultado" method="GET">
+
+    <div class="mb-3">
+      <input type="text" class="form-control" id="exampleInputPassword1" name="nombre" placeholder="buscar por nombre">
     </div>
-    {% endblock %}
+    <button type="submit" class="btn btn-primary" value="enviar">Submit</button>
+  </form>
+</div>
+{% endblock %}

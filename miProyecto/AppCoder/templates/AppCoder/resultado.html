@@ -1,6 +1,8 @@
 {% extends 'AppCoder/padre.html' %}
 
   {% block titulo %}
+
+   {% if res %}
     <h1 style="color: aliceblue;">Resultado de busqueda:</h1>
    
     {% for user in res %}  
@@ -9,5 +11,11 @@
       <h3> {{user.apellido}}</h3>
        
       <h3>{{user.email}}</h3> 
-    {% endfor %}   
+
+     <button> <a href="{% url 'borrarUser' user.nombre %}">borrar usuario</a></button>
+    {% endfor %} 
+    
+   {% else %}
+     <h3 style="color: aliceblue;">El nombre que intentas buscar no existe o no esta registrado</h3> 
+   {% endif %} 
   {% endblock %}
