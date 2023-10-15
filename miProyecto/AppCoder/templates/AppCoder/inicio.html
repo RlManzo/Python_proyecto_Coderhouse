@@ -1,6 +1,19 @@
 {%  extends 'AppCoder/padre.html' %}
 
+
+
 {% block titulo %}
+
+{%  block inicio %}
+
+<h1 class="container text-center" style="color: aliceblue;">
+  {{usuario}}
+  {{mensaje}}
+</h1>
+
+
+{%  endblock %}
+
 {% load static %}  
 <h1 class="container" style="color: azure; margin-left: 20%;">Bienvenido a nuestra tienda oficial de Nintendo</h1>
 <div class="d-flex">

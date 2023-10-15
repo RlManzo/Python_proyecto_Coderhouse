@@ -4,30 +4,18 @@
 
 {% block titulo %}
 
-
-
-
 <div class="container" style="width: 400px; margin-top: 50px; margin-bottom: 50px;">
-<h1 class="text-center" style="color: aliceblue;">iniciar sesion</h1>
+  <h1 class="text-center" style="color: aliceblue;">Registrate</h1>
 <form style="background-color: rgb(193, 149, 235); padding: 20px; border-radius: 15px;" action="" method="POST"> {%  csrf_token %}
 
   <table>
 
       {{  form.as_p }}
   </table>
-  <input class="btn btn-primary" type="submit" value="iniciar sesion">
+  <input class="btn btn-primary" type="submit" value="registrate">
+
 
 </form>
-{% block mensaje  %}
-<h1 style="color: aliceblue;"> 
-
-
-{{mensaje}}
-</h1> 
-
-{% endblock %}
-
-
 </div>
 
 
